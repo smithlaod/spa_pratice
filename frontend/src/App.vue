@@ -1,13 +1,12 @@
 <template>
   <div id="app">
     <el-menu router :default-active="activeIndex" mode="horizontal">
-<!--      :route="{name: 'about'}-->
-      <el-menu-item index="/home" >Home</el-menu-item>
+      <el-menu-item index="/" >Home</el-menu-item>
       <el-menu-item index="/about">About</el-menu-item>
-      <el-menu-item >
-        <a href="https://element.eleme.io" target="_blank">Link</a>
-      </el-menu-item>
+      <el-menu-item index="/login">Login</el-menu-item>
+      <el-menu-item index="/show">Show</el-menu-item>
     </el-menu>
+
     <router-view/>
   </div>
 
@@ -20,7 +19,7 @@ export default {
     return {
       activeIndex: this.$route.name
     }
-  }
+  },
 }
 </script>
 
